@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DeepFake Detection System</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      min-height: 100vh;
+      background-color:#1A1A1D ;
+    }
+
+    .header {
+      background-color: #5d7aa3; /* Changed to #404a49 */
+      width: 100%;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .container {
+      border: 2px solid #454f5e; /* Grey */
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      margin-top: 20px;
+      background-color: #2b2b2b;
+    }
+
+    
+    .btn-secondary {
+      background-color: #5d7aa3; /* Changed to #404a49 */
+      border-color: #5d7aa3; /* Changed to #404a49 */
+    }
+
+    .btn-secondary:hover {
+      background-color: #2e3534; /* Darken the color on hover */
+      border-color: #2e3534; /* Darken the color on hover */
+    }
+
+    .sample-text {
+      color: white;
+      margin-top: 20px;
+      max-width: 600px; /* Adjust the maximum width of the paragraph */
+      text-align: justify; /* Align the paragraph text */
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1 class="text-light">DeepFake Detection System</h1>
+  </div>
+
+  <div class="container">
+    <h1 class="text-center mb-5" style="color: white;">Submit URL for Deepfake Analysis</h1>
+    <form action="/analyze" method="post">
+      <div class="mb-3">
+        <label for="urlInput" class="form-label" style="color: white;">Enter URL:</label>
+        <input type="url" id="urlInput" name="url" class="form-control"/>
+      </div>
+      <button type="submit" class="btn btn-secondary">Analyze</button>
+    </form>
+      <p class="text-center mb-5" style="color: white;">(or)</p>
+      <div class="mb-3">
+        <label for="browseInput" class="form-label" style="color: white;">Select file from the System:</label>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" id="browseInput" name="browse" class="form-control"/>
+        <input type="submit" name="upload"/>
+        </form>
+      </div>
+     
+    
+  </div>
+
+  <p class="sample-text">Deepfake detectors play a crucial role in safeguarding the integrity of digital content by identifying and mitigating the proliferation of deepfake media. As the use of AI-generated synthetic media continues to rise, these detectors serve as essential tools in discerning authentic content from manipulated or fabricated material. By leveraging advanced algorithms and machine learning techniques, deepfake detectors analyze various aspects of multimedia content, including facial expressions, voice patterns, and contextual inconsistencies, to flag potentially deceptive media. Their importance lies in preserving the authenticity of digital information, protecting individuals from misinformation and slander, and upholding the credibility of media sources in an increasingly digitized world. Additionally, these detectors contribute to the ongoing efforts to combat the spread of malicious content, thereby fostering trust and reliability in online communications and media consumption.</p>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
